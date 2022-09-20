@@ -12,7 +12,7 @@ function App() {
 
     const loadContent = () => {
         if (!content) {
-            return <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Loading_2.gif" />
+            return <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Loading_2.gif" alt={"Loading..."}/>
         } else {
             for (let i = 0; i < content.data.children.length; i++) {
                 if (content.data.children[i].data.is_video) {
@@ -34,14 +34,6 @@ function App() {
       <header>
         <h1>Reddit Client: A Codecamy React/Redux project</h1>
       </header>
-      <nav>
-        <ul>
-          <li>Menu item</li>
-          <li>Menu item</li>
-          <li>Menu item</li>
-          <li>Menu item</li>
-        </ul>
-      </nav>
       <main>
         <h2>Content:</h2>
           {loadContent()}
