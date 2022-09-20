@@ -1,14 +1,14 @@
-import React, {useState} from "react";
+import React, {useState} from 'react';
 import './App.css';
+
+const fetchRedditData = async () => {
+    const response = await fetch('https://www.reddit.com/r/cute.json')
+        .then((response) => response.json())
+    return response
+}
 
 function App() {
     const [content, setContent] = useState()
-    const fetchRedditData = async () => {
-        const response = await fetch('https://www.reddit.com/r/cute.json')
-            .then((response) => response.json())
-            .then(dataObject => setContent(dataObject))
-        return response
-    }
 
     const loadContent = () => {
         if (!content) {
@@ -27,7 +27,7 @@ function App() {
         }
     }
 
-    fetchRedditData()
+    fetchRedditData().then(response => setContent(response))
 
     return (
     <client-for-reddit>
@@ -54,3 +54,4 @@ function App() {
 }
 
 export default App;
+export {fetchRedditData}
