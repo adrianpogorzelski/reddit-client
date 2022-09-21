@@ -12,9 +12,32 @@ function App() {
 
     const loadContent = () => {
         if (!content) {
-            return <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Loading_2.gif" alt={"Loading..."}/>
+            return <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Loading_2.gif" alt="Loading..."/>
         } else {
-            for (let i = 0; i < content.data.children.length; i++) {
+            return (
+                <div>
+                    {Object.entries(content.data.children).map(item => {
+                        if (item[1].data.is_video) {
+                            return (
+                                <div>
+                                    <h3>{JSON.stringify(item[1].data.title)}</h3>
+                                    <video controls>
+                                        <source src={item[1].data.secure_media.reddit_video.fallback_url} />
+                                    </video>
+                                </div>
+                            )
+                        } else {
+                            return (
+                                <div>
+                                    <h3>{JSON.stringify(item[1].data.title)}</h3>
+                                    <img src={item[1].data.url} />
+                                </div>
+                            )
+                        }
+                    })}
+                </div>
+            )
+             /*for (let i = 0; i < content.data.children.length; i++) {
                 if (content.data.children[i].data.is_video) {
                     const url = content.data.children[i].data.secure_media.reddit_video.fallback_url
                     return (
@@ -23,7 +46,7 @@ function App() {
                         </video>
                     )
                 }
-            }
+            }*/
         }
     }
 
