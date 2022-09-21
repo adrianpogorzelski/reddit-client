@@ -30,7 +30,7 @@ function App() {
                             return (
                                 <div>
                                     <h3>{JSON.stringify(item[1].data.title)}</h3>
-                                    <img src={item[1].data.url} alt={JSON.stringify(item[1].data.title}/>
+                                    <img src={item[1].data.url} alt={item[1].data.title}/>
                                 </div>
                             )
                         }
