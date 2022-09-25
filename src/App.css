@@ -1,4 +1,13 @@
-* img {
-    width: 600px;
-    height: auto;
+body {
+    background-color: pink;
+}
+
+h1, footer, img {
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
