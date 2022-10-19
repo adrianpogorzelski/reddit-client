@@ -8,3 +8,9 @@ test('download Reddit data', () => {
         expect(response).toBe(!null)
     })
 });
+
+test("Menu button", () => {
+
+        expect(1).toEqual(1)
+
+})
