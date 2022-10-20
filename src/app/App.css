@@ -1,0 +1,34 @@
+body {
+    background-image: url("bg.jpg");
+    background-size: contain;
+}
+
+h1, footer, img {
+    text-align: center;
+}
+
+#search-bar {
+    width: 50em;
+    height: 2em;
+    margin-top: auto;
+    margin-bottom: auto;;
+}
+
+button {
+    padding: 0.5em;
+    margin: 1em;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.centered {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
