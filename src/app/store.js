@@ -1,6 +1,7 @@
 import {createStore} from 'redux'
+import fetch from "node-fetch";
 
-const fetchRedditData = async (subreddit = 'popular') => {
+export const fetchRedditData = async (subreddit = 'popular') => {
     let url = `https://www.reddit.com/r/${subreddit}.json`;
     const response = await fetch(url)
         .then((response) => response.json())

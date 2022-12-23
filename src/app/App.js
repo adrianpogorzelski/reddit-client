@@ -1,32 +1,8 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import './App.css';
-import { Tile } from '../components/tile';
+import {Tile} from '../components/tile'
 
 function App(props) {
-    // const popular = await useSelector(state => state)
-
-    /*
-    const [content, setContent] = useState()
-
-    fetchRedditData().then(response => setContent(response))
-
-    const loadTiles = () => {
-        if (!content) {
-            return <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Loading_2.gif" alt="Loading..."/>
-        } else {
-            return (
-                Object.entries(content.data.children).map(item => {
-                    if (item[1].data.is_video) {
-                        return <Tile title={JSON.stringify(item[1].data.title)} videoLink={item[1].data.secure_media.reddit_video.fallback_url}/>
-                    } else {
-                        return <Tile title={JSON.stringify(item[1].data.title)} src={item[1].data.url}/>
-                    }
-                })
-            )
-        }  
-    }
-    */
     return (
     <client-for-reddit>
       <header>
@@ -48,7 +24,7 @@ function App(props) {
             <button>Category</button>
         </section>
         <section class="flex">
-
+            {Tile}
         </section>
       </main>
       <footer>
@@ -59,4 +35,3 @@ function App(props) {
 }
 
 export default App;
-// export {fetchRedditData}
