@@ -3,9 +3,10 @@ import fetch from "node-fetch";
 
 export const fetchRedditData = async (subreddit = 'popular') => {
     let url = `https://www.reddit.com/r/${subreddit}.json`;
-    const response = await fetch(url)
+    const redditData = await fetch(url)
         .then((response) => response.json())
-    return response
+        .then((response) => response.data)
+    console.log("Reddit data: " + redditData.toString())
 }
 
 const initialState = fetchRedditData()

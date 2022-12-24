@@ -15,7 +15,7 @@ const loadMediaType = (props) => {
 
 export const Tile = (props) => {
     return (
-        <div class="tile">
+        <div className="tile">
             <h3>{props.title}</h3>
             {loadMediaType(props)}
         </div>
