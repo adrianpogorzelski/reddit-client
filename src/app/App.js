@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
-import {Tile} from '../components/tile'
-import {store} from './store'
+import {store, buttonClick} from './store'
 
 function App(props) {
     return (
@@ -15,8 +14,8 @@ function App(props) {
             <button>Search</button>
         </section>
         <section id="filter-buttons" className="flex centered">
-            <button>Category</button>
-            <button>Category</button>
+            <button subreddit="Popular" onClick={() => buttonClick('Popular')}>Popular</button>
+            <button subreddit="Other" onClick={() => buttonClick('Other')}>Other</button>
             <button>Category</button>
             <button>Category</button>
             <button>Category</button>
@@ -24,9 +23,8 @@ function App(props) {
             <button>Category</button>
             <button>Category</button>
         </section>
-        <section className="flex">
-            <Tile />
-            {}
+        <section className="flex" id="storeRender">
+            {store.getState()}
         </section>
       </main>
       <footer>
