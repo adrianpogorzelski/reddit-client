@@ -1,4 +1,4 @@
-import {createStore} from 'redux'
+import {createStore} from 'redux';
 import fetch from "node-fetch";
 
 /*export const fetchSubreddits = async () => {
@@ -31,7 +31,7 @@ const displayCategoryReducer = (state = initialState, action) => {
 
 export const store = createStore(displayCategoryReducer)
 
-const unsubscribe = store.subscribe(() => {
+store.subscribe(() => {
     let newState = store.getState()
     let renderState = document.getElementById('storeRender')
     renderState.innerHTML = newState

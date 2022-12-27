@@ -1,5 +1,5 @@
-const App = require('../src/app/App');
-import {fetchRedditData} from "../src/app/store";
+const App = require('../src/App');
+import {fetchRedditData} from "../src/store/store";
 
 describe('Reddit data', () => {
     describe('Popular', () => {

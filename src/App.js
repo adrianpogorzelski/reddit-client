@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {store, buttonClick} from './store'
+import {buttonClick} from './store/store'
 
 function App(props) {
     return (
@@ -24,7 +24,6 @@ function App(props) {
             <button>Category</button>
         </section>
         <section className="flex" id="storeRender">
-            {store.getState()}
         </section>
       </main>
       <footer>
