@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import {buttonClick} from './store/store'
+import {buttonClick} from '../store/store'
 
-function App(props) {
+export function App(props) {
     return (
     <client-for-reddit>
       <header>
@@ -24,6 +24,7 @@ function App(props) {
             <button>Category</button>
         </section>
         <section className="flex" id="storeRender">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Loading_Key.gif" alt="Loading" />
         </section>
       </main>
       <footer>

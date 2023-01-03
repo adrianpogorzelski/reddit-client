@@ -1,17 +1,15 @@
-const App = require('../src/App');
-import {fetchRedditData} from "../src/store/store";
+import 'jsdom-global/register'
+import React from "react";
+import "../src/setupTests"
+import {mount} from "enzyme";
 
-describe('Reddit data', () => {
-    describe('Popular', () => {
-        test('is downloaded', () => {
-            fetchRedditData().then(response => {
-                expect(response).not.toBeNull()
-            })
-        })
-        test('is an object', () => {
-            fetchRedditData().then(response => {
-                expect(typeof response == 'object').toBe(true)
-            })
+
+describe("App", () => {
+    describe("Main DOM element", () => {
+        test("Is rendered", () => {
+            const AppContainer = import('../src/app/App').default
+            const wrapper = mount(<AppContainer />)
+            expect(wrapper.find('client-for-reddit')).toExist()
         })
     })
 })

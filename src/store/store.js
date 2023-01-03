@@ -11,13 +11,7 @@ import fetch from "node-fetch";
     console.log(subreddit)
 }*/
 
-export const fetchRedditData = async (subreddit = 'popular') => {
-    const url = `https://www.reddit.com/r/${subreddit}.json`;
-    const response = await fetch(url)
-    return response;
-}
 
-// const initialState = "https://upload.wikimedia.org/wikipedia/commons/2/2a/Loading_Key.gif"
 const initialState = 'Popular'
 
 const displayCategoryReducer = (state = initialState, action) => {
