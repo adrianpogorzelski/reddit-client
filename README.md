@@ -19,6 +19,11 @@ c) version control and publishing:
 ## Features
 The project is a Reddit client, which displays the latests posts in the most popular subreddits.
 
+The app features the following:
+- fetches the latest posts using Reddit API,
+- allows to search for a particular subreddit,
+- filters by subreddit
+
 ## Future work
 The following work is planned:
 - searchbar

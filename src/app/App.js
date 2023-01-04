@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import {buttonClick} from '../store/store'
+import Filters from '../components/filters/filters'
 
-export function App(props) {
+const App = (props) => {
     return (
     <client-for-reddit>
       <header>
@@ -13,17 +13,9 @@ export function App(props) {
             <input id="search-bar" type="text" placeholder="Search for a subreddit..."/>
             <button>Search</button>
         </section>
-        <section id="filter-buttons" className="flex centered">
-            <button subreddit="Popular" onClick={() => buttonClick('Popular')}>Popular</button>
-            <button subreddit="Other" onClick={() => buttonClick('Other')}>Other</button>
-            <button>Category</button>
-            <button>Category</button>
-            <button>Category</button>
-            <button>Category</button>
-            <button>Category</button>
-            <button>Category</button>
-        </section>
-        <section className="flex" id="storeRender">
+          <Filters />
+        <section id="storeRender">
+            <h2>Select a category</h2>
             <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Loading_Key.gif" alt="Loading" />
         </section>
       </main>
