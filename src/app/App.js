@@ -4,7 +4,7 @@ import Filters from '../components/filters/filters'
 
 const App = (props) => {
     return (
-    <client-for-reddit>
+    <client-for-reddit id="client">
       <header>
         <h1>Reddit Client: A Codecamy React/Redux project</h1>
       </header>
