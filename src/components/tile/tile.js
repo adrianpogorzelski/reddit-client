@@ -13,7 +13,7 @@ const loadMediaType = (props) => {
 }
 
 
-export const Tile = (props) => {
+const Tile = (props) => {
     return (
         <div className="tile">
             <h3>{props.title}</h3>
@@ -21,3 +21,5 @@ export const Tile = (props) => {
         </div>
     )
 }
+
+export default Tile;
