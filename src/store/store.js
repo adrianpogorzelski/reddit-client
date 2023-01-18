@@ -1,12 +1,11 @@
 import {createStore} from 'redux';
+import {fetchRedditData} from "../features/fetch";
 
 const initialState = []
 
 const displayCategoryReducer = (state = initialState, action) => {
     switch(action.type) {
         case 'setSubreddit':
-            return action.payload
-        case 'subredditList':
             return action.payload
         default:
             return state
@@ -18,6 +17,9 @@ export const store = createStore(displayCategoryReducer)
 store.subscribe(() => {
     let newState = store.getState()
     let renderState = document.getElementById('storeRender')
-    renderState.innerHTML = newState
+    const setContent = async () => {
+        renderState.innerHTML = await fetchRedditData(newState)
+    }
+    setContent()
 })
 

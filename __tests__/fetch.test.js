@@ -11,4 +11,6 @@ describe('Reddit data', () => {
             expect(typeof response == 'object').toBe(true)
         })
     })
+    // is valid
+    // contains data
 })
