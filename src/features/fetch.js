@@ -1,9 +1,15 @@
 import fetch from "node-fetch";
-import axios from "axios";
 
-export const fetchRedditData = async (subreddit = 'popular') => {
-    const url = `https://www.reddit.com/r/${subreddit}.json`;
-    const response = await axios
-        .get(url)
-        .then(response => {return response})
+export const fetchRedditData = (subreddit = 'popular') => {
+        const url = `https://www.reddit.com/r/${subreddit}.json`
+            const redditData = fetch(url)
+                .then(result => result.json())
+                .then(responseJson => {
+                    if (responseJson.kind === "Listing") {
+                        return responseJson
+                    } else {
+                        return "Subreddit could not be found"
+                    }
+                })
+            return redditData
 }
