@@ -1,16 +1,16 @@
 const fetch = require('../src/features/fetch')
 
 describe('Reddit data', () => {
-    test('is downloaded', () => {
-        fetch.fetchRedditData().then(response => {
-            expect(response).not.toBeNull()
-        })
+    test('Filter buttons return corresponding objects', () => {
+        fetch.fetchRedditData('AskReddit')
+            .then(response => {
+                expect(response.data.children[0].data.subreddit).toBe('AskReddit')
+            })
     })
-    test('is an object', () => {
-        fetch.fetchRedditData().then(response => {
-            expect(typeof response == 'object').toBe(true)
-        })
+    test('non-existant subreddits return "Subreddit could not be found" string', () => {
+        fetch.fetchRedditData('thisisarandomredditthatdoesnotexist')
+            .then(response => {
+                expect(response).toBe("Subreddit could not be found")
+            })
     })
-    // is valid
-    // contains data
 })

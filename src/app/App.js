@@ -2,6 +2,9 @@ import React from 'react';
 import './App.css';
 import Searchbar from "../components/searchbar/searchbar";
 import Filters from '../components/filters/filters'
+import {setSubreddit} from "../features/search";
+
+setSubreddit()
 
 const App = (props) => {
     return (
@@ -15,8 +18,10 @@ const App = (props) => {
               <Filters />
           </nav>
           <section id="storeRender">
-            <h2>Select a category</h2>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Loading_Key.gif" alt="Loading" />
+            <h2>r/Popular</h2>
+              <article>{
+
+              }</article>
           </section>
       </main>
       <footer>

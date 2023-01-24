@@ -1,16 +1,5 @@
 import React, {useState} from "react";
-import {store} from "../../store/store";
-
-export const setSubreddit = (subreddit) => {
-    return {
-        type: 'setSubreddit',
-        payload: subreddit
-    }
-}
-
-export const buttonClick = (button) => {
-    store.dispatch(setSubreddit(button))
-}
+import {buttonClick} from "../../features/search";
 
 const Filters = () => {
     const filterButtons = []
