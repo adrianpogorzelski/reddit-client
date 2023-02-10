@@ -18,12 +18,9 @@ exports[`Rendering Main App component Renders 1`] = `
       id="storeRender"
     >
       <h2>
-        Select a category
+        r/Popular
       </h2>
-      <img
-        alt="Loading"
-        src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Loading_Key.gif"
-      />
+      <article />
     </section>
   </main>
   <footer>

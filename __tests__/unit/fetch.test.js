@@ -1,4 +1,4 @@
-const fetch = require('../src/features/fetch')
+const fetch = require('../../src/features/fetch')
 
 describe('Reddit data', () => {
     test('Filter buttons return corresponding objects', () => {

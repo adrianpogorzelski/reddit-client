@@ -1,4 +1,4 @@
-import Tile from '../src/components/tile/tile'
+import Tile from '../../src/components/tile/tile'
 
 describe("TILE", () => {
     test("OK", () => {

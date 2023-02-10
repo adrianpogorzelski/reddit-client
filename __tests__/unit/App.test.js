@@ -1,8 +1,8 @@
 import 'jsdom-global/register'
 import React from "react";
-import "../src/setupTests"
-import {mount, render, shallow} from "enzyme";
-import App from "../src/app/App";
+import "../../src/setupTests"
+import {shallow} from "enzyme";
+import App from "../../src/app/App";
 
 let wrapper = shallow(<App/>);
 
@@ -23,8 +23,17 @@ describe("Rendering", () => {
                 expect(wrapper.find('Filters')).toHaveLength(1)
             })
         });
-        // Tiles
-            // Are rendered
-            // 25 of them
+    })
+    describe('Main', () => {
+        describe('Tiles', () => {
+            test("Renders", () => {
+                throw Error('TBD')
+            })
+        })
+        describe('Error', () => {
+            test("Renders", () => {
+                throw Error('TBD')
+            })
+        })
     })
 })
