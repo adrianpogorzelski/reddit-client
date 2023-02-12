@@ -2,6 +2,10 @@ import React, {useState} from "react";
 import {buttonClick} from "../../features/search";
 
 const Filters = () => {
+    return (
+        <nav></nav>
+    )
+/*
     const filterButtons = []
     const [subreddits, setSubreddits] = useState("")
 
@@ -25,6 +29,7 @@ const Filters = () => {
     return (
         <nav id="filters">{filterButtons}</nav>
     )
+*/
 }
 
 export default Filters

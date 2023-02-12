@@ -17,11 +17,8 @@ const App = (props) => {
               <Searchbar />
               <Filters />
           </nav>
-          <section id="storeRender">
-            <h2>r/Popular</h2>
-              <article>{
+          <section id="redditContent">
 
-              }</article>
           </section>
       </main>
       <footer>
