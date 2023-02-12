@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import Searchbar from "../components/searchbar/searchbar";
-import Filters from '../components/filters/filters'
-import {setSubreddit} from "../features/search";
+import Searchbar from "./components/searchbar/searchbar";
+import Filters from './components/filters/filters'
+import {setSubreddit} from "./features/search";
 
 setSubreddit()
 
@@ -14,8 +14,8 @@ const App = (props) => {
       </header>
       <main>
           <nav>
-              <Searchbar />
               <Filters />
+              <Searchbar />
           </nav>
           <section id="redditContent">
 

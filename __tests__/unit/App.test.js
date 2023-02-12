@@ -2,7 +2,7 @@ import 'jsdom-global/register'
 import React from "react";
 import "../../src/setupTests"
 import {shallow} from "enzyme";
-import App from "../../src/app/App";
+import App from "../../src/App";
 
 let wrapper = shallow(<App/>);
 

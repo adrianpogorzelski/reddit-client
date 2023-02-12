@@ -1,9 +1,25 @@
-import React, {useState} from "react";
-import {buttonClick} from "../../features/search";
+import React from "react";
+import './filters.css'
+// import {buttonClick} from "../../features/search";
+const mockList = ['Popular', 'Subreddit 2', 'Subreddit 3', 'Subreddit 4', 'Subreddit 5', 'Subreddit 6', 'Subreddit 7', 'Subreddit 8', 'Subreddit 9', 'Subreddit 10']
 
 const Filters = () => {
+
     return (
-        <nav></nav>
+        <nav>
+            <button>Subreddits</button>
+            <ul className='hidden'>
+                <li>Subreddit</li>
+                <li>Subreddit</li>
+                <li>Subreddit</li>
+                <li>Subreddit</li>
+                <li>Subreddit</li>
+                <li>Subreddit</li>
+                <li>Subreddit</li>
+                <li>Subreddit</li>
+                <li>Subreddit</li>
+            </ul>
+        </nav>
     )
 /*
     const filterButtons = []
