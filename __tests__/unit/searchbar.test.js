@@ -7,11 +7,15 @@ import Searchbar from "../../src/components/searchbar/searchbar";
 let wrapper = shallow(<Searchbar/>)
 
 describe('Component', () => {
+    test('Renders main component', () => {
+        expect(wrapper.find('#searchbar')).toHaveLength(1)
+
+    })
     test('Renders a text field', () => {
-        throw new Error( 'to be updated')
+        expect(wrapper.find('#searchText')).toHaveLength(1)
     })
     test('Renders a button', () => {
-        throw new Error( 'to be updated')
+        expect(wrapper.find('#searchButton')).toHaveLength(1)
     })
 })
 
