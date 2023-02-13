@@ -1,23 +1,29 @@
 import React from "react";
 import './filters.css'
-// import {buttonClick} from "../../features/search";
-const mockList = ['Popular', 'Subreddit 2', 'Subreddit 3', 'Subreddit 4', 'Subreddit 5', 'Subreddit 6', 'Subreddit 7', 'Subreddit 8', 'Subreddit 9', 'Subreddit 10']
+import {store} from "../../store/store";
+
+export const clickOption = id => {
+    return {
+        type: 'subreddits/currentSubreddit',
+        payload: id
+    }
+}
 
 const Filters = () => {
-
     return (
         <nav>
-            <button>Subreddits</button>
-            <ul className='hidden'>
-                <li>Subreddit</li>
-                <li>Subreddit</li>
-                <li>Subreddit</li>
-                <li>Subreddit</li>
-                <li>Subreddit</li>
-                <li>Subreddit</li>
-                <li>Subreddit</li>
-                <li>Subreddit</li>
-                <li>Subreddit</li>
+            <button id='filtersButton'>Subreddits</button>
+            <ul>
+                <li id='popular' onClick={() => store.dispatch(clickOption('popular'))}>Popular</li>
+                <li>Subreddit 2</li>
+                <li>Subreddit 3</li>
+                <li>Subreddit 4</li>
+                <li>Subreddit 5</li>
+                <li>Subreddit 6</li>
+                <li>Subreddit 7</li>
+                <li>Subreddit 8</li>
+                <li>Subreddit 9</li>
+                <li>Subreddit 10</li>
             </ul>
         </nav>
     )

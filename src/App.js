@@ -2,21 +2,16 @@ import React from 'react';
 import './App.css';
 import Searchbar from "./components/searchbar/searchbar";
 import Filters from './components/filters/filters'
-import {setSubreddit} from "./features/search";
-
-setSubreddit()
 
 const App = (props) => {
     return (
-    <client-for-reddit id="client">
+    <client-for-reddit>
       <header>
         <h1>Reddit Client: A Codecamy React/Redux project</h1>
       </header>
+        <Filters />
+        <Searchbar />
       <main>
-          <nav>
-              <Filters />
-              <Searchbar />
-          </nav>
           <section id="redditContent">
 
           </section>
